@@ -1,4 +1,6 @@
 ---
+import { AstroFont } from "astro-font";
+
 interface Props {
   title: string;
 }
@@ -10,18 +12,62 @@ const { title } = Astro.props;
 <html lang="es-ES">
   <head>
     <meta charset="UTF-8" />
+    <title>{title}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Metal Mecánica Dueñas: Fabricación y comercialización de pernos, tuercas, arandelas, tapones de agua en bronce, tapas de copa de bronce y accesorios de frenos de alta calidad. Soluciones automotrices confiables para todas sus necesidades mecánicas."
+      content="Metal Mecánica Dueñas: Nos especializamos en la fabricación y comercialización de pernos, tuercas, arandelas, tapones de agua en bronce y accesorios de frenos"
     />
     <meta
       name="keywords"
       content="Metal Mecánica Dueñas, pernos, tuercas, arandelas, tapones de agua en bronce, tapas de copa de bronce, accesorios de frenos, productos automotrices, fabricación de componentes mecánicos, comercialización de componentes automotrices, alta calidad, soluciones mecánicas, industria metal mecánica"
     />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="canonical" content="https://metalmecanicaduenas.com/" />
+    <meta name="author" content="Metal Mecánica Dueñas" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <AstroFont
+      config={[
+        {
+          name: "Fira Sans",
+          src: [
+            {
+              style: "normal",
+              weight: 700,
+              path: "./public/fonts/FiraSans-Bold.ttf",
+            },
+            {
+              style: "normal",
+              weight: 600,
+              path: "./public/fonts/FiraSans-SemiBold.ttf",
+            },
+          ],
+          preload: true,
+          display: "swap",
+          fallback: "sans-serif",
+        },
+        {
+          name: "Montserrat",
+          src: [
+            {
+              style: "normal",
+              weight: 400,
+              path: "./public/fonts/Montserrat-Medium.ttf",
+            },
+            {
+              style: "normal",
+              weight: 600,
+              path: "./public/fonts/Montserrat-SemiBold.ttf",
+            },
+          ],
+          preload: true,
+          display: "swap",
+          fallback: "sans-serif",
+        },
+      ]}
+    />
     <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
   </head>
   <body>
     <slot />
