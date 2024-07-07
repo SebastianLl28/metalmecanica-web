@@ -1,0 +1,99 @@
+---
+import Logo from "@assets/logo.webp";
+import { Image } from "astro:assets";
+
+const links = [
+  { name: "Inicio", url: "/", ariaLabel: "Ir a inicio" },
+  { name: "Nosotros", url: "/", ariaLabel: "Ir a nosotros" },
+  { name: "Productos", url: "/", ariaLabel: "Ir a productos" },
+  { name: "Servicios", url: "/", ariaLabel: "Ir a servicios" },
+  { name: "Contacto", url: "/", ariaLabel: "Ir a contacto" },
+];
+---
+
+<header
+  class="sticky top-0 py-2 border-b-2 border-blue-950 bg-white z-20"
+  aria-label="Cabecera del sitio web"
+>
+  <div class="container flex items-center justify-between">
+    <a href="/" class="flex items-center gap-3" aria-label="Ir a inicio">
+      <Image
+        src={Logo}
+        alt="Logo de Metal Mecánica Dueñas"
+        width={65}
+        height={60}
+        loading="eager"
+      />
+      <b
+        class="font-firaSans text-2xl translate-y-px hidden lg:inline-block"
+        aria-label="Metal Mecánica Dueñas">Metal Mecánica Dueñas</b
+      >
+    </a>
+    <nav
+      class="absolute md:static hidden md:inline-block md:border-0 md:p-0 bg-white md:bg-inherit border-2 border-blue-950 top-16 py-3 px-4 right-4 rounded md:rounded-none"
+      aria-label="Menú de navegación"
+    >
+      <ul class="flex flex-col md:flex-row gap-6 font-monserrat">
+        {
+          links.map(({ url, name, ariaLabel }) => (
+            <li>
+              <a href={url} aria-label={ariaLabel}>
+                {name}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+    <button
+      class="md:hidden"
+      type="button"
+      aria-label="Abrir menú"
+      aria-expanded="false"
+      aria-controls="menu"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="36"
+        height="36"
+        viewBox="0 0 24 24"
+      >
+        <path
+          fill="none"
+          stroke="#172554"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M3.75 6.75h16.5M3.75 12h16.5M12 17.25h8.25"></path>
+      </svg>
+    </button>
+  </div>
+</header>
+<style>
+  .animate {
+    animation: open 0.2s ease-in-out;
+  }
+  @keyframes open {
+    0% {
+      transform: scale(0.9);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+</style>
+<script>
+  const $ = (selector: string) => document.querySelector(selector);
+
+  const $button = $("button");
+  const $nav = $("nav");
+
+  $button?.addEventListener("click", () => {
+    const expanded = $button.getAttribute("aria-expanded") === "true" || false;
+    $button.setAttribute("aria-expanded", (!expanded).toString());
+    $nav?.classList.toggle("hidden");
+    $nav?.classList.toggle("animate");
+  });
+</script>
