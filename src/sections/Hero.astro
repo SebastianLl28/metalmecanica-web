@@ -1,0 +1,63 @@
+---
+import HeroImage from "@assets/hero-image.webp";
+import { Image } from "astro:assets";
+---
+
+<main
+  class="container container-grid py-6 grid xl:grid-cols-[0.6fr,1fr] relative"
+>
+  <div
+    class="bg-white/70 backdrop-blur flex flex-col justify-center h-fit my-auto py-4 sm:py-6 xl:pt-12 xl:pr-12 sm:px-6 px-3 mx-auto rounded-sm shadow w-10/12 xl:bg-white/50 xl:relative xl:w-[120%] xl:mx-0 xl:bottom-auto absolute -bottom-36 sm:-bottom-28 inset-x-0 xl:inset-x-auto gap-2 md:gap-4"
+  >
+    <h1
+      class="text-xl sm:text-3xl md:text-4xl xl:text-5xl font-firaSans leading-[1.1] font-bold text-balance text-center xl:text-start"
+    >
+      Las mejores soluciones en componentes mecánicos
+    </h1>
+    <p
+      class="text-xs sm:text-sm xl:text-base font-monserrat text-center xl:text-start"
+    >
+      Nos especializamos en la fabricación y comercialización de pernos,
+      tuercas, arandelas, tapones de agua en bronce y accesorios de frenos.
+    </p>
+    <a
+      href="/"
+      class="font-monserrat bg-blue-950 self-center xl:self-start text-white px-8 py-3 rounded-3xl text-xs sm:text-sm xl:text-base"
+      >Ver Productos</a
+    >
+  </div>
+  <figure>
+    <Image
+      src={HeroImage}
+      alt="Hombre trabajando en una máquina"
+      class="w-full"
+      loading="eager"
+      widths={[300, 400, 500, 700, 1200]}
+    />
+  </figure>
+</main>
+<style>
+  .container-grid {
+    grid-template-areas:
+      "images"
+      "contents";
+  }
+  .container-grid figure {
+    grid-area: images;
+  }
+  .container-grid div {
+    grid-area: contents;
+  }
+  @media (min-width: 1280px) {
+    .container-grid {
+      grid-row: auto;
+      grid-template-areas: none;
+    }
+    .container-grid figure {
+      grid-area: unset;
+    }
+    .container-grid div {
+      grid-area: unset;
+    }
+  }
+</style>
