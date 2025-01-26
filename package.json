@@ -10,9 +10,9 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/check": "^0.7.0",
-    "@astrojs/tailwind": "^5.1.0",
-    "astro": "^4.11.5",
+    "@astrojs/check": "^0.9.4",
+    "@astrojs/tailwind": "^5.1.5",
+    "astro": "^5.1.9",
     "astro-font": "^0.0.81",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
