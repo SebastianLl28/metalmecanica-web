@@ -12,7 +12,7 @@ const links = [
 ---
 
 <header
-  class="sticky top-0 py-2 border-b-2 border-blue-950 bg-white z-20"
+  class="sticky top-0 z-20 border-b-2 border-blue-950 bg-white py-2"
   aria-label="Cabecera del sitio web"
 >
   <div class="container flex items-center justify-between">
@@ -23,18 +23,18 @@ const links = [
         width={65}
         height={60}
         loading="eager"
-        class="w-[65px] h-[60px] object-cover"
+        class="h-[60px] w-[65px] object-cover"
       />
       <b
-        class="font-firaSans text-2xl translate-y-px hidden lg:inline-block"
+        class="hidden translate-y-px font-firaSans text-2xl lg:inline-block"
         aria-label="Metal Mecánica Dueñas">Metal Mecánica Dueñas</b
       >
     </a>
     <nav
-      class="absolute md:static hidden md:inline-block md:border-0 md:p-0 bg-white md:bg-inherit border-2 border-blue-950 top-16 py-3 px-4 right-4 rounded md:rounded-none"
+      class="absolute right-4 top-16 hidden rounded border-2 border-blue-950 bg-white px-4 py-3 md:static md:inline-block md:rounded-none md:border-0 md:bg-inherit md:p-0"
       aria-label="Menú de navegación"
     >
-      <ul class="flex flex-col md:flex-row gap-6 font-monserrat">
+      <ul class="flex flex-col gap-6 font-monserrat md:flex-row">
         {
           links.map(({ url, name, ariaLabel }) => (
             <li>

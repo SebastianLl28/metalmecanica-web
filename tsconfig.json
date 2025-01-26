@@ -8,7 +8,7 @@
       "@lib/*": ["src/lib/*"],
       "@components/*": ["src/components/*"],
       "@pages/*": ["src/pages/*"],
-      "@shareds/*": ["src/shareds/*"],
+      "@shareds/*": ["src/shareds/*"]
     }
   }
 }

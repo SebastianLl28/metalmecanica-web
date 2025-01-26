@@ -4,25 +4,26 @@ import { Image } from "astro:assets";
 ---
 
 <main
-  class="container container-grid py-6 grid xl:grid-cols-[0.6fr,1fr] relative mb-36 xl:mb-0"
+  class="container-grid container relative mb-36 grid py-6 xl:mb-0 xl:grid-cols-[0.6fr,1fr]"
 >
   <div
-    class="bg-white/70 backdrop-blur flex flex-col justify-center h-fit my-auto py-4 sm:py-6 xl:pt-12 xl:pr-12 sm:px-6 px-3 mx-auto rounded-sm shadow w-10/12 xl:bg-white/50 xl:relative xl:w-[120%] xl:mx-0 xl:bottom-auto absolute -bottom-36 sm:-bottom-28 inset-x-0 xl:inset-x-auto gap-2 md:gap-4"
+    class="absolute inset-x-0 -bottom-36 mx-auto my-auto flex h-fit w-10/12 flex-col justify-center gap-2 rounded-sm bg-white/70 px-3 py-4 shadow backdrop-blur sm:-bottom-28 sm:px-6 sm:py-6 md:gap-4 xl:relative xl:inset-x-auto xl:bottom-auto xl:mx-0 xl:w-[120%] xl:bg-white/50 xl:pr-12 xl:pt-12"
   >
-    <h1
-      class="text-xl sm:text-3xl md:text-4xl xl:text-5xl font-firaSans leading-[1.1] font-bold text-balance text-center xl:text-start"
+    <h2
+      class="text-balance text-center font-firaSans text-xl font-bold leading-[1.1] sm:text-3xl md:text-4xl xl:text-start xl:text-5xl"
     >
-      Las mejores soluciones en componentes mecánicos
-    </h1>
+      Expertos en componentes mecánicos de alta precisión
+    </h2>
     <p
-      class="text-xs sm:text-sm xl:text-base font-monserrat text-center xl:text-start"
+      class="text-center font-monserrat text-xs sm:text-sm xl:text-start xl:text-base"
     >
-      Nos especializamos en la fabricación y comercialización de pernos,
-      tuercas, arandelas, tapones de agua en bronce y accesorios de frenos.
+      Especialistas en ingeniería mecánica de precisión, diseñamos y fabricamos
+      piezas de alta calidad que garantizan rendimiento, durabilidad y
+      soluciones a medida para tus necesidades industriales.
     </p>
     <a
       href="/"
-      class="font-monserrat bg-blue-950 self-center xl:self-start text-white px-8 py-3 rounded-3xl text-xs sm:text-sm xl:text-base"
+      class="self-center rounded-3xl bg-blue-950 px-8 py-3 font-monserrat text-xs text-white sm:text-sm xl:self-start xl:text-base"
       >Ver Productos</a
     >
   </div>
