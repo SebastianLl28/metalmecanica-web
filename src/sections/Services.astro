@@ -1,0 +1,33 @@
+---
+import { Image } from "astro:assets";
+import NutsImage from "@assets/nuts.webp";
+import SoladadorImage from "@assets/soldador.webp";
+import CarEngineImage from "@assets/motor.webp";
+---
+
+<section class="container my-12 mb-12 overflow-hidden">
+  <h2 class="font-firaSans text-3xl font-bold">Encuentra lo que Necesitas</h2>
+  <div class="grid grid-cols-3 justify-stretch">
+    <Image
+      src={NutsImage}
+      alt="Pernos"
+      class="w-full"
+      loading="eager"
+      height={500}
+    />
+    <Image
+      src={SoladadorImage}
+      alt="Soldador"
+      class="w-full"
+      loading="eager"
+      height={500}
+    />
+    <Image
+      src={CarEngineImage}
+      alt="Motor de auto"
+      class="w-full"
+      loading="eager"
+      height={500}
+    />
+  </div>
+</section>
