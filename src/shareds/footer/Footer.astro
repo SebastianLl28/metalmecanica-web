@@ -1,0 +1,15 @@
+---
+import { Image } from "astro:assets";
+import Logo from "@assets/logo.webp";
+---
+
+<footer class="container border-t-2 border-blue-950 py-6">
+  <Image
+    src={Logo}
+    alt="Logo de Metal Mecánica Dueñas"
+    width={65}
+    height={60}
+    loading="lazy"
+    class="mx-auto h-[60px] w-[65px] object-cover"
+  />
+</footer>

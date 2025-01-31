@@ -1,0 +1,18 @@
+---
+interface Props {
+  href?: string;
+  type?: "primary" | "secondary";
+  className?: string;
+}
+
+const { href = "/", type = "primary", className } = Astro.props;
+---
+
+<a
+  href={href}
+  class={`text-center w-fit inline-block rounded-3xl px-8 py-3 font-monserrat text-xs sm:text-sm xl:self-start xl:text-base ${
+    type === "primary" ? "bg-blue-950 text-white" : "bg-white text-blue-950"
+  } ${className}`}
+>
+  <slot />
+</a>
